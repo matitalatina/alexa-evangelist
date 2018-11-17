@@ -18,6 +18,6 @@ export class LiturgyClient {
     };
     const response = await axios(options);
     const gospel = response.data.data.readings.filter((r: any) => r.book_type === "gospel")[0];
-    return gospel ? gospel.text.replace(/\[\[.*\]\]/g, "") : "Purtroppo non riesco a recuperare il Vangelo di oggi.";
+    return gospel ? gospel.title + ".\n" + gospel.text.replace(/\[\[.*\]\]/g, "") : "Purtroppo non riesco a recuperare il Vangelo di oggi.";
   }
 }
