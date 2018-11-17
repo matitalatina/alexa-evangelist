@@ -1,0 +1,42 @@
+{
+  "name": "alexa-evangelist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matitalatina/alexa-evangelist.git"
+  },
+  "author": "Mattia Natali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matitalatina/alexa-evangelist/issues"
+  },
+  "homepage": "https://github.com/matitalatina/alexa-evangelist#readme",
+  "dependencies": {
+    "ask-sdk-core": "^2.3.0",
+    "ask-sdk-model": "^1.9.0",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "date-fns": "^1.29.0",
+    "inversify": "^5.0.1",
+    "lodash": "^4.17.11",
+    "reflect-metadata": "^0.1.12",
+    "source-map-support": "^0.5.9"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/lodash": "^4.14.118",
+    "@types/node": "^10.12.5",
+    "axios-mock-adapter": "^1.15.0",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.10.3",
+    "ts-jest": "^23.10.4",
+    "ts-mockito": "^2.3.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}

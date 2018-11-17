@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "8"
+install:
+  - npm install
+script:
+  - npm test
+before_deploy:
+  - npm run build
+  - zip -j -r build.zip dist/* 
+deploy:
+  provider: lambda
+  function_name: "alexa-evangelist_lambda"
+  region: "eu-west-1"
+  role: "arn:aws:iam::636133167487:role/service-role/randommet-alexa_role"
+  runtime: "nodejs8.10"
+  handler_name: "handler"
+  zip: build.zip
+  on:
+    branch: master
