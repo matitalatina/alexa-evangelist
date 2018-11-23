@@ -14,6 +14,14 @@ describe("LiturgyHandler", () => {
       .toBe(true);
   });
 
+  it("should handle LaunchRequest type", () => {
+    const handlerInput: any = {
+      requestEnvelope: { request: { type: "LaunchRequest" } },
+    };
+    expect(handler.canHandle(handlerInput))
+      .toBe(true);
+  });
+
   it("should retrieve current gospel", () => {
     when(mockLiturgyClient.getCurrentGospel()).thenReturn(Promise.resolve("gospel"));
     const handlerInput: any = {

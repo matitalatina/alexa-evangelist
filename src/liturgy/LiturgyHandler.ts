@@ -16,8 +16,8 @@ export class LiturgyHandler implements CustomSkillRequestHandler {
 
   public canHandle(input: HandlerInput): boolean | Promise<boolean> {
     const request = input.requestEnvelope.request;
-    return request.type === "IntentRequest"
-      && request.intent.name === "CurrentGospel";
+    return (request.type === "IntentRequest"
+      && request.intent.name === "CurrentGospel") || request.type === "LaunchRequest";
   }
 
   public async handle(input: HandlerInput): Promise<Response> {
